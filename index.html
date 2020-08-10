@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div>你好{{msg}}</div>
+        <div>{{count}}</div>
+        <div v-text="msg"></div>
+        <input type="text" v-model="msg">
+    </div>
+    <script src="./js/dep.js"></script>
+    <script src="./js/watcher.js"></script>
+    <script src="./js/compiler.js"></script>
+    <script src="./js/observer.js"></script>
+    <script src="./js/vue.js"></script>
+    <script>
+        let vm = new Vue({
+            el: '#app',
+            data: {
+                count: 500,
+                msg: 'hello',
+                person: {
+                    name: '张三'
+                },
+                name: 'lee',
+                input: 'repuduction'
+            }
+        })
+    </script>
+</body>
+</html>
